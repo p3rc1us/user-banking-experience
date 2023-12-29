@@ -7,12 +7,9 @@ html {
     align-items: center;
 }
 
-.mainContainer {
-    display:flex;
-    flex-direction: column;
+.balance, .deposit, .sendMoney, .withdraw, .expenses, .help {
+    display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     border: red solid 1px;
-    height: 80vh;
-    width: 90vw;
 }
