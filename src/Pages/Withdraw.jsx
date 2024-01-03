@@ -2,7 +2,7 @@ import React from "react";
 
 function Deposit() {
   return (
-    <h1>Transfer</h1>
+    <h1>Where do you want to cash-out?</h1>
 )  
 }
 

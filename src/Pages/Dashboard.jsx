@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from 'react';
-import "../Styles/Dashboard.css";
 import { useNavigate } from "react-router-dom";
 
 function Dashboard() {
@@ -31,7 +30,7 @@ function Dashboard() {
     }
 
 return(
-    <fieldset className="grid grid-cols-4 grid-rows-3 gap-3 mainContainer">
+    <fieldset className="grid mt-72 grid-cols-4 grid-rows-3 gap-3 mainContainer">
         <div className="rounded-xl w-96 h-72 grid-rows-subgrid col-span-2 row-span-2 row-start-1 flex justify-center items-center flex-col border border-slate-700">
             <h1 className="text-6xl font-bold">${Balance.toLocaleString()}</h1>
             <form onSubmit={handleTransfer}>
