@@ -1,27 +1,42 @@
 import { useState } from "react";
 import TransactionChoices from "../Components/TransactionChoices";
 
+//-------------//
 function Deposit() {
 
-  const [ isAmountEntered, setIsAmountEntered ] = useState(false)
-  
-  const handleFormSubmit = (e)  => {
+  const [ isAmountEntered, setIsAmountEntered ] = useState(false);  
+  const [ depositAmount, setDepositAmount ] = useState('');
+
+
+  const handleInputChange = (e) => {
+    setDepositAmount(e.target.value);
+  };
+
+  const handleModify = (e)  => {
     e.preventDefault();
-    setIsAmountEntered(true);
-  }
+    if (Number(depositAmount) < 5000) {
+      setIsAmountEntered(true);
+    } 
+    else {
+      alert("Deposit amount must be less than $5000");
+    }
+    }
+
+  //------------------------------//
+    
 
   return (
   <div className="flex justify-center items-center h-screen w-screen">
     
     {isAmountEntered ? null : (
     <form
-    onSubmit={handleFormSubmit}>
+    onSubmit={handleModify}>
+      
       <h1 className='text-5xl font-bold text-gray-800'>enter amount first</h1>
-      <input
-      type="number"
-      placeholder="Enter Amount"
-      >
-      </input>
+      <input type="number" 
+      value={depositAmount} 
+      onChange={handleInputChange}
+      placeholder="Enter Deposit Amount"/>
       <button type="submit">Submit</button>
     </form>
     )}

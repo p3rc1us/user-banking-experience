@@ -1,39 +1,44 @@
 import React from "react";
-import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+//1231231//
+import { useContext } from 'react';
+import { MyContext } from '../Components/Context';
+//---------------------//
 
 function Dashboard() {
 
-    const [Transfer, setTransfer] = useState('');
-    const [Balance, setBalance] = useState(2000);
+    // const [Transfer, setTransfer] = useState('');
     const navigate = useNavigate();
 
+    //context provider//
+    const { contextValue } = useContext(MyContext);
+    //----------------------//
 
-    function handleTransfer(e) {
-        e.preventDefault();
+    // function handleTransfer(e) {
+    //     e.preventDefault();
 
-        const transferValue = parseInt(Transfer);
-        if (transferValue >= 0) {
-            if (transferValue > Balance) {
-                alert(`Insufficient funds! You only have $${Balance.toLocaleString()}.`);
-                return;
-        }
+    //     const transferValue = parseInt(Transfer);
+    //     if (transferValue >= 0) {
+    //         if (transferValue > Balance) {
+    //             alert(`Insufficient funds! You only have $${Balance.toLocaleString()}.`);
+    //             return;
+    //     }
 
-        setBalance(Balance - transferValue);
-        setTransfer("");
-        }
+    //     setBalance(Balance - transferValue);
+    //     setTransfer("");
+    //     }
         
-        else {
-            alert("please input right amount to transfer")
-            return;
-        }
-    }
+    //     else {
+    //         alert("please input right amount to transfer")
+    //         return;
+    //     }
+    // }
 
 return(
     <fieldset className="grid mt-72 grid-cols-4 grid-rows-3 gap-3 mainContainer">
         <div className="rounded-xl w-96 h-72 grid-rows-subgrid col-span-2 row-span-2 row-start-1 flex justify-center items-center flex-col border border-slate-700">
-            <h1 className="text-6xl font-bold">${Balance.toLocaleString()}</h1>
-            <form onSubmit={handleTransfer}>
+            <h1 className="text-6xl font-bold">${contextValue.toLocaleString()}</h1>
+            {/* <form onSubmit={handleTransfer}>
             <input
             type="number"
             value={Transfer}
@@ -41,7 +46,7 @@ return(
             onChange={(event) => setTransfer(event.target.value)}
             />
             <button type="submit">Transfer</button>
-            </form>
+            </form> */}
         </div>
 
         <div className="rounded-xl flex justify-center items-center flex-col border border-slate-700">

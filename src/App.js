@@ -5,11 +5,13 @@ import Deposit from './Pages/Deposit.jsx';
 import Transfer from './Pages/Transfer.jsx';
 import Withdraw from './Pages/Withdraw.jsx';
 import Help from './Pages/Help.jsx';
+import { MyContextProvider } from './Components/Context.jsx';
 
 
 
 function App() {
   return (
+    <MyContextProvider>
     <div className="App">
       <BrowserRouter>
         <Routes>
@@ -21,6 +23,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </div>
+    </MyContextProvider>
   );
 }
 
