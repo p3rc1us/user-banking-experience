@@ -1,46 +1,50 @@
 import React from "react";
 import "../Styles/TransactionChoices.css";
+import { useNavigate } from "react-router-dom";
 
 function TransactionChoices() {
+
+  const navigate = useNavigate();
+
     return (
         <div className="flex flex-col items-center w-full  overflow-y-auto overflow-x-hidden scrollbar-custom-style">
 
-        <div className="flex flex-row items-center justify-center w-full border-t-2 border-b-2 h-auto p-4 hover:bg-slate-50 hover:cursor-pointer">
+        <div className="flex flex-row items-center justify-center w-full border-t-2 border-b-2 h-auto p-4 hover:bg-slate-50 hover:cursor-pointer" onClick={() => navigate('/checkout')}>
           <img class="h-12 w-12 ml-24" src="https://d1nhio0ox7pgb.cloudfront.net/_img/g_collection_png/standard/512x512/market_stand.png" alt="marketplace icon" />
           <span className="ml-12 mr-14">The MarketPlace</span>
         </div>
 
-        <div className="flex flex-row items-center justify-center w-full h-auto border-b-2 p-4  hover:bg-slate-50 hover:cursor-pointer">
+        <div className="flex flex-row items-center justify-center w-full h-auto border-b-2 p-4  hover:bg-slate-50 hover:cursor-pointer" onClick={() => navigate('/checkout')}>
           <img class="h-12 w-14" src="https://d1nxzqpcg2bym0.cloudfront.net/google_play/com.praxxys.shopwise/2aaebb6c-fcc9-11e6-a0c7-53e9dfa7dec2/128x128" alt="shopwise icon" />
           <span className="ml-12 mr-2">ShopWise</span>
         </div>
 
-        <div className=" flex flex-row items-center justify-center w-full border-b-2 p-4  hover:bg-slate-50 hover:cursor-pointer">
+        <div className=" flex flex-row items-center justify-center w-full border-b-2 p-4  hover:bg-slate-50 hover:cursor-pointer" onClick={() => navigate('/checkout')}>
           <img class="h-12 w-1/4" src="https://images.crunchbase.com/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/f9bf5633f94c36efafaa" alt="rustan's icon" />
           <span className="mr-12">Rustan's</span>
         </div>
 
-        <div className="flex flex-row items-center justify-center w-full border-b-2 h-auto p-4 hover:bg-slate-50 hover:cursor-pointer">
-          <img class="h-12 w-12 ml-24" src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/2cd02b62765bef0cf1cdc1676e01228f" alt="marketplace icon" />
+        <div className="flex flex-row items-center justify-center w-full border-b-2 h-auto p-4 hover:bg-slate-50 hover:cursor-pointer" onClick={() => navigate('/checkout')}>
+          <img class="h-12 w-12 ml-24" src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/2cd02b62765bef0cf1cdc1676e01228f" alt="Robinsons Supermarket icon" />
           <span className="ml-14 mr-1">Robinsons Supermarket</span>
         </div>
 
-        <div className="flex flex-row items-center justify-center w-full border-b-2 h-auto p-4 hover:bg-slate-50 hover:cursor-pointer">
-          <img class="h-12 w-12 ml-32" src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/8ec67611499e290a047b364948150014" alt="marketplace icon" />
+        <div className="flex flex-row items-center justify-center w-full border-b-2 h-auto p-4 hover:bg-slate-50 hover:cursor-pointer" onClick={() => navigate('/checkout')}>
+          <img class="h-12 w-12 ml-32" src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/8ec67611499e290a047b364948150014" alt="Robinsons Department Store icon" />
           <span className="ml-14 mr-0">Robinsons Department Store</span>
         </div>
 
-        <div className="flex flex-row items-center justify-center w-full border-b-2 h-auto p-4 hover:bg-slate-50 hover:cursor-pointer">
-          <img class="h-12 w-12 ml-32" src="https://portal.gifted.ph/storage/images/medium/51ffd25c8ad38dd2d844064f5285901d.png" alt="marketplace icon" />
+        <div className="flex flex-row items-center justify-center w-full border-b-2 h-auto p-4 hover:bg-slate-50 hover:cursor-pointer" onClick={() => navigate('/checkout')}>
+          <img class="h-12 w-12 ml-32" src="https://portal.gifted.ph/storage/images/medium/51ffd25c8ad38dd2d844064f5285901d.png" alt=">Robinsons Easymart icon" />
           <span className="ml-12 mr-14">Robinsons Easymart</span>
         </div>
 
-        <div className="flex flex-row items-center justify-center w-full border-b-2 h-auto p-4 hover:bg-slate-50 hover:cursor-pointer">
-          <img class="h-12 w-12 ml-28" src="https://images.crunchbase.com/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/uv2aoqziaiajo7o1uwdu" alt="marketplace icon" />
+        <div className="flex flex-row items-center justify-center w-full border-b-2 h-auto p-4 hover:bg-slate-50 hover:cursor-pointer" onClick={() => navigate('/checkout')}>
+          <img class="h-12 w-12 ml-28" src="https://images.crunchbase.com/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/uv2aoqziaiajo7o1uwdu" alt="Southstar Drug icon" />
           <span className="ml-14 mr-20">Southstar Drug</span>
         </div>
 
-        <div className="flex flex-row items-center justify-center w-full border-b-2 h-auto p-4 hover:bg-slate-50 hover:cursor-pointer">
+        <div className="flex flex-row items-center justify-center w-full border-b-2 h-auto p-4 hover:bg-slate-50 hover:cursor-pointer" onClick={() => navigate('/checkout')}>
           <img class="h-12 w-12 ml-12" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISDxUSEhIVFRUVFRUQF
           xUYGBMVFRgWFRYXGBUSFhcYHSggGBolHRUVIjEhJSotLi8uFx8zODMsOCgtOisBCgoKDg0OGxAQGysmICU1MjUvLzUrLS0tLS0tLS0tLS0tLS0tLS0
           tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABQYBBwMECAL/xABHEAACAgECA
@@ -93,12 +97,12 @@ function TransactionChoices() {
           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
-          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" alt="marketplace icon" />
+          qL0XpnaxA8PAS1cd4JVq6e6tBxncrA4ZWGcMp8j1kfwblirSra4ay62xSrW2Hc5UDog9g8PuHsmNGrrVKi201lY7m5PZ58ufEtZTJz8vH5FO5K1dx4RdUaMU91qGF+4YL/wDx7M58z190uHIGfwXp8/mfxMi+QeGseDmiwNWXN1ZyCGAYnrgzl0fZ+iKEbWatq16CsWbEx7MLNNbZROVlcn0vq7lnPP1K0RnFRlju9D50Z/8AUN//AEqfwkX2c8D01+nve6iuxhqrEDMoJACocA+zJJ+ck+EaHuuNOqo4qTSV1Ix3Eejj0d58TM6XkHu9wTXapEdmsKVlUBZsZPT3AfdL2W1whKHtHFtQw8PhLy3EYSck1HO7OhzbbZVxfRminvGWpwtYIUEAEYBPsH7JfdK7NWrOuxiqllznaxHVc+7wlJt4OaOK6Fa1satEuy7bn6vvzusx45PnLTpuJO+qtoNDqtaowuPqPuGcDp/HynPrYqddahhqMct9+Mv93L0PEm5bb8H3xri9WlqNtzFUztGASS2MhQPb4/dKD9L19uq/Ciab0EXu007ZFzU/3nC4yTnPX7pdOZbNUEUaXT1Xkn0lsZVAx1VhuIBOZVH0vFzrxrPodG5ajRsFq7cE5zndnM07OVddbcunLT3cl/GOVnxK3uTklvj0+pNa/jVes4Rqbagw+ptRlYEMrhOqH2kZ8pSrNTqW0/CltpVKlv0/d2Bss/UYyv8Ad6dZd9JRrNTRqKNVRVphYjKrVkPlnzvJAbEjaeRLvqA/EGevT2JalZqAA2EYAw3ToMTbT26enqhJxW+Us55W2GtitkJzSaT49O85OGjPMOr+wrH/AGpInn/T8PrNekrqoqttdC9u1R3Ne7q5PkT4dfLPtkvpNLYeO6s+mitp0VbAOgO1OqkjBI9kkOEcnUVV2C7OosvyLbH9Yg+S/m+3PjnHslZXV0WxslJ7Rjsvu/TnD/gdEpxcUu9kFzNfZVxnTHT098y6ZlWsMB6OT5+4YnzXoKtRx21dRSj/ANWrco2GAb0c49uMkTn0nBn0/FdJWDbalensXvWBOAzMVrLeAAHQCSvFOT++1bapNXfSzotZFeF9FQBjd4+QlpXVVqK6sZi8Sw+9/rIVUpZeO/j5Ef2jaCujhRSmtUUXVsEUYGS3j+qWfgWqutp3X09w+cBCwbpgYbIlO5u5a7jQP3b6i+x7adxdmtbCsT0A8B1M2BWOg+A/ZOPUyitLFJ9XxP4t/Beufmb1xftG+Nvyz7mIieX0R8jqwIiJUkREQDOYmIgDEYiIAmZiIAiIgAzMxEAYiIgYMxMRAEYiIBmJiIAxMzEQDMxiIgAREQBiIiCRERBAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAf/9k=" alt="No Brand icon" />
           <span className="ml-14 mr-14">No Brand</span>
         </div>
 
-        <div className="flex flex-row items-center justify-center w-full border-b-2 h-auto p-4 hover:bg-slate-50 hover:cursor-pointer">
-          <img class="h-12 w-12 ml-40" src="https://media.licdn.com/dms/image/C560BAQEcKuTBukhZMQ/company-logo_200_200/0/1630571979345?e=2147483647&v=beta&t=3VfiOPy9l8qhsKAAf_ZS2rw6df5Xw9V2yajl2P0OWQY" alt="marketplace icon" />
+        <div className="flex flex-row items-center justify-center w-full border-b-2 h-auto p-4 hover:bg-slate-50 hover:cursor-pointer" onClick={() => navigate('/checkout')}>
+          <img class="h-12 w-12 ml-40" src="https://media.licdn.com/dms/image/C560BAQEcKuTBukhZMQ/company-logo_200_200/0/1630571979345?e=2147483647&v=beta&t=3VfiOPy9l8qhsKAAf_ZS2rw6df5Xw9V2yajl2P0OWQY" alt="handyman icon" />
           <span className="ml-14 mr-14">Robinsons Handyman Inc</span>
         </div>
         

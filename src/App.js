@@ -5,6 +5,7 @@ import Deposit from './Pages/Deposit.jsx';
 import Transfer from './Pages/Transfer.jsx';
 import Withdraw from './Pages/Withdraw.jsx';
 import Help from './Pages/Help.jsx';
+import Qrcode from './Pages/Qrcode.jsx';
 import { MyContextProvider } from './Components/Context.jsx';
 
 
@@ -20,6 +21,7 @@ function App() {
           <Route path='/transfer' element={<Transfer/>} />
           <Route path='/withdraw' element={<Withdraw/>} />
           <Route path='/help' element={<Help/>} />
+          <Route path='/checkout' element={<Qrcode/>} />
         </Routes>
       </BrowserRouter>
     </div>

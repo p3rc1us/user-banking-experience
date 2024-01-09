@@ -29,15 +29,17 @@ function Deposit() {
   <div className="flex justify-center items-center h-screen w-screen">
     
     {isAmountEntered ? null : (
-    <form
+    <form className="flex flex-col justify-center items-center"
     onSubmit={handleModify}>
       
-      <h1 className='text-5xl font-bold text-gray-800'>enter amount first</h1>
-      <input type="number" 
+      <h1 className='text-5xl font-bold text-gray-800'>How much do you want to Deposit?</h1>
+      <input 
+      className="mt-4"
+      type="text"
       value={depositAmount} 
       onChange={handleInputChange}
       placeholder="Enter Deposit Amount"/>
-      <button type="submit">Submit</button>
+      <button type="submit"></button>
     </form>
     )}
 

@@ -17,12 +17,13 @@ function Withdraw() {
 
   const handleModify = (e)  => {
     e.preventDefault();
+
+    if(Number(withdrawAmount) < 10) {
+      alert(`Minimum withdrawal amount is $10`)
+    }
     if (Number(withdrawAmount) < balance) {
       setIsAmountEntered(true);
       alert (`$${withdrawAmount} is reserved for withdrawal`)
-      
-      // if (Number(withdrawAmount) === 0-9) {
-      // alert("The minimum withdrawal amount is $10")
     }
     else {
       alert(`Withdrawal exceeds your balance of $${balance.toLocaleString()}`);
@@ -33,15 +34,17 @@ function Withdraw() {
     <div className="flex justify-center items-center h-screen w-screen">
     
     {isAmountEntered ? null : (
-    <form
+    <form className="flex flex-col justify-center items-center"
     onSubmit={handleModify}>
-      <h1 className='text-5xl font-bold text-gray-800'>enter amount first</h1>
-      <input type="number" 
+      <h1 className='text-5xl font-bold text-gray-800'>How much do you want to Withdraw?</h1>
+      <input
+      className="mt-4"
+      type="text" 
       value={withdrawAmount} 
       onChange={handleInputChange}
       placeholder="Enter Withdrawal Amount"
       />
-      <button type="submit">Submit</button>
+      <button type="submit"></button>
     </form>
     )}
 
