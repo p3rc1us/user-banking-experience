@@ -1,45 +1,23 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-//1231231//
 import { useContext } from 'react';
 import { MyContext } from '../Components/Context';
-//---------------------//
 
 function Dashboard() {
 
-    // const [Transfer, setTransfer] = useState('');
     const navigate = useNavigate();
-
-    //context provider//
     const { contextValue } = useContext(MyContext);
-    //----------------------//
 
-    // function handleTransfer(e) {
-    //     e.preventDefault();
-
-    //     const transferValue = parseInt(Transfer);
-    //     if (transferValue >= 0) {
-    //         if (transferValue > Balance) {
-    //             alert(`Insufficient funds! You only have $${Balance.toLocaleString()}.`);
-    //             return;
-    //     }
-
-    //     setBalance(Balance - transferValue);
-    //     setTransfer("");
-    //     }
-        
-    //     else {
-    //         alert("please input right amount to transfer")
-    //         return;
-    //     }
-    // }
 
 return(
     <div className="flex flex-col justify-center items-center mt-20">
-    <h1 className="text-4xl font-extrabold text-dark-gray">GO banking</h1>
+    <h1 className="text-4xl font-extrabold text-blue-500">GO banking</h1>
     <fieldset className="grid mt-40 grid-cols-4 grid-rows-2 gap-3  bg-slate-50/95 rounded-xl  p-10">
+
         <div className="rounded-xl w-96 h-72 grid-rows-subgrid col-span-2 row-span-2 row-start-1 flex justify-center items-center flex-col shadow-lg hover:shadow-2xl bg-slate-50/90">
-            <h1 className="text-6xl font-bold text-dark-gray">${contextValue.toLocaleString()}</h1>
+            <h1 className="text-6xl font-bold text-blue-500 mt-24">${contextValue.toLocaleString()}</h1>
+            <span className="text-base font-semibold italic text-blue-500 mt-16 mr-52 hover:text-blue-700">4917 4845 8989 7107</span>
+            <span className="text-base font-light italic text-blue-500 mt-0 mr-80 hover:text-blue-700">01/26</span>
         </div>
 
         <div className="rounded-xl flex justify-center items-center flex-col shadow-lg hover:shadow-2xl bg-slate-50/95">
@@ -51,7 +29,6 @@ return(
         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" 
         onClick={() => navigate('/deposit')}>Deposit</button>
         </div>
-
 
         <div className="rounded-xl flex justify-center items-center flex-col shadow-lg hover:shadow-2xl bg-slate-50/95">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-blue-500 mb-2">
